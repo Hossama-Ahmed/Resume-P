@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE ahtml>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -72,7 +72,7 @@
         .truth-card {
             background-color: #f0f4f8;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .truth-card:hover {
             transform: translateY(-5px);
@@ -80,39 +80,11 @@
         .truth-card.lie {
             background-color: #f8d7da;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            justify-content: center;
-            align-items: center;
+        .truth-card.correct {
+            background-color: #d4edda;
         }
-        .modal-content {
-            background-color: #fefefe;
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-        }
-        .close-button {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close-button:hover,
-        .close-button:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
+        .truth-card.incorrect {
+            background-color: #f8d7da;
         }
     </style>
 </head>
@@ -142,6 +114,15 @@
         <section id="summary" class="bg-secondary rounded-lg shadow-lg p-8 mb-12 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Hossam Ahmed</h1>
             <h2 class="text-xl md:text-2xl text-accent mt-2">Strategic Leader in Global Connectivity & Interconnect Engineering</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center mt-4 text-gray-600 space-y-2 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:hossama@google.com" class="hover:text-accent transition-colors duration-300">hossama@google.com</a>
+                <span>|</span>
+                <a href="mailto:hossam4408@gmail.com" class="hover:text-accent transition-colors duration-300">hossam4408@gmail.com</a>
+                <span>|</span>
+                <a href="tel:+16508619537" class="hover:text-accent transition-colors duration-300">650-861-9537</a>
+                <span>|</span>
+                <a href="https://www.linkedin.com/in/hossam-ahmed-2a70012" target="_blank" class="hover:text-accent transition-colors duration-300">LinkedIn Profile</a>
+            </div>
             <p class="mt-6 max-w-4xl mx-auto text-gray-600 leading-relaxed">
                 Strategic leader with over 20 years of experience driving transformational change in global internet connectivity and interconnect engineering for WAN and Edge networks. My career is defined by a consistent ability to translate complex challenges into quantifiable business results, including securing hundreds of millions of dollars in cost avoidance and pioneering new processes that reduced manual toil by 94%. With deep expertise in the telecom and peering ecosystems of both North America and the Middle East, I am a proven leader in building and guiding teams through organizational change, partnering with product teams to architect solutions that enabled both Google's internal products and Cloud & AI deals.
             </p>
@@ -252,38 +233,85 @@
                         </div>
                         <div class="bg-secondary p-6 rounded-lg shadow-md ml-4 md:ml-0 md:mr-4 flex-grow">
                             <h4 class="text-lg font-semibold mb-2 text-gray-800">Graduation & Early Career</h4>
-                            <p class="text-gray-600">Graduated with a Bachelor's in Electronics and Communications Engineering from the city of Alexandria, followed by hands-on field experience in onshore drilling.</p>
+                            <p class="text-gray-600">**2003**: Graduated with a Bachelor's in Electronics and Communications Engineering from the city of Alexandria, followed by hands-on field experience in onshore drilling.</p>
                         </div>
                     </div>
                     <!-- Milestone 2 -->
                     <div class="flex items-center md:flex-row-reverse relative md:z-10 md:mt-20">
                          <div class="w-16 h-16 bg-accent text-white flex-shrink-0 rounded-full flex items-center justify-center text-2xl md:ml-4">
-                            <i class="fas fa-plane-departure"></i>
+                            <i class="fas fa-briefcase"></i>
                         </div>
                         <div class="bg-secondary p-6 rounded-lg shadow-md ml-4 md:ml-0 md:mr-4 flex-grow">
-                            <h4 class="text-lg font-semibold mb-2 text-gray-800">Washington D.C. & Orange</h4>
-                            <p class="text-gray-600">My journey with Orange took me to Washington D.C., where I was involved in field deployment and Edge-planning for their US network footprint.</p>
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">Early Days at Orange</h4>
+                            <p class="text-gray-600">**2005**: Began my journey at Orange in Cairo as an Operations Network Engineer, eventually becoming a supervisor.
                         </div>
                     </div>
                     <!-- Milestone 3 -->
                     <div class="flex items-center relative md:z-10">
                         <div class="w-16 h-16 bg-accent text-white flex-shrink-0 rounded-full flex items-center justify-center text-2xl md:mr-4">
-                           <i class="fas fa-baby"></i>
+                            <i class="fas fa-plane-departure"></i>
                         </div>
                         <div class="bg-secondary p-6 rounded-lg shadow-md mr-4 flex-grow">
-                            <h4 class="text-lg font-semibold mb-2 text-gray-800">Family Milestones</h4>
-                            <p class="text-gray-600">The journey of parenthood began with our first child, adding a new dimension to my life's journey.</p>
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">New Horizons</h4>
+                            <p class="text-gray-600">**2009**: My journey with Orange took me to Washington D.C., where I was involved in field deployment and Edge-planning for their US network footprint.</p>
                         </div>
                     </div>
-                    <!-- Milestone 4 -->
+                     <!-- Milestone 4 -->
                     <div class="flex items-center md:flex-row-reverse relative md:z-10 md:mt-20">
                          <div class="w-16 h-16 bg-accent text-white flex-shrink-0 rounded-full flex items-center justify-center text-2xl md:ml-4">
-                            <i class="fab fa-google"></i>
+                            <i class="fas fa-baby"></i>
                         </div>
                         <div class="bg-secondary p-6 rounded-lg shadow-md ml-4 md:ml-0 md:mr-4 flex-grow">
-                            <h4 class="text-lg font-semibold mb-2 text-gray-800">The Road to Google</h4>
-                            <p class="text-gray-600">My call to Google marked the start of a new chapter in my career, focusing on networking and interconnect at a global scale.</p>
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">Family Milestones</h4>
+                            <p class="text-gray-600">**2011**: The journey of parenthood began with our first child, adding a new dimension to my life's journey.</p>
                         </div>
+                    </div>
+                    <!-- Milestone 5 -->
+                    <div class="flex items-center relative md:z-10">
+                        <div class="w-16 h-16 bg-accent text-white flex-shrink-0 rounded-full flex items-center justify-center text-2xl md:mr-4">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="bg-secondary p-6 rounded-lg shadow-md mr-4 flex-grow">
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">The Road to Google</h4>
+                            <p class="text-gray-600">**2015**: My call to Google marked the start of a new chapter in my career, focusing on networking and interconnect at a global scale.</p>
+                        </div>
+                    </div>
+                    <!-- Milestone 6 -->
+                    <div class="flex items-center md:flex-row-reverse relative md:z-10 md:mt-20">
+                         <div class="w-16 h-16 bg-accent text-white flex-shrink-0 rounded-full flex items-center justify-center text-2xl md:ml-4">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <div class="bg-secondary p-6 rounded-lg shadow-md ml-4 md:ml-0 md:mr-4 flex-grow">
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">More Family Milestones</h4>
+                            <p class="text-gray-600">**2017 & 2021**: The family continued to grow with the arrival of our second and third children, further enriching our lives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-center">
+                    <h4 class="text-2xl font-semibold mb-4 text-accent">Biking Achievements</h4>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="text-5xl text-gray-600 mb-2">
+                           <i class="fas fa-biking"></i>
+                        </div>
+                        <p class="text-gray-700 font-bold text-lg">71.8 mi</p>
+                        <p class="text-gray-500 text-sm">Longest Ride Distance</p>
+                        <p class="text-gray-700 font-bold text-lg mt-4">4,117 ft</p>
+                        <p class="text-gray-500 text-sm">Elevation Gain</p>
+                    </div>
+                </div>
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-center">
+                    <h4 class="text-2xl font-semibold mb-4 text-accent">Running Achievements</h4>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="text-5xl text-gray-600 mb-2">
+                           <i class="fas fa-running"></i>
+                        </div>
+                        <p class="text-gray-700 font-bold text-lg">8.4 mi</p>
+                        <p class="text-gray-500 text-sm">Longest Run Distance</p>
+                        <p class="text-gray-700 font-bold text-lg mt-4">1,742 ft</p>
+                        <p class="text-gray-500 text-sm">Elevation Gain</p>
                     </div>
                 </div>
             </div>
@@ -292,10 +320,10 @@
                 <h4 class="text-2xl font-semibold mb-4 text-accent">Two Truths and a Lie</h4>
                 <p class="text-gray-600 mb-6">Click on the statement that you think is a lie.</p>
                 <div id="truths-lie-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="truth-card p-6 rounded-lg shadow-md" data-is-lie="false">
+                    <div class="truth-card p-6 rounded-lg shadow-md" data-is-lie="true">
                         <p class="font-medium text-gray-700">I raced on a Formula One track before!</p>
                     </div>
-                    <div class="truth-card p-6 rounded-lg shadow-md" data-is-lie="true">
+                    <div class="truth-card p-6 rounded-lg shadow-md" data-is-lie="false">
                         <p class="font-medium text-gray-700">On my first skydive, my main parachute didn’t open and I had to cut and use the emergency one!</p>
                     </div>
                     <div class="truth-card p-6 rounded-lg shadow-md" data-is-lie="false">
@@ -311,13 +339,6 @@
     <footer class="bg-gray-800 text-white text-center p-4">
         <p>&copy; 2025 Hossam Ahmed. Interactive Resume Concept.</p>
     </footer>
-
-    <div id="message-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <p id="modal-message" class="text-lg font-medium"></p>
-        </div>
-    </div>
 
     <script>
         const experienceData = {
@@ -521,32 +542,17 @@
                     });
                 });
             });
-            
-            const modal = document.getElementById('message-modal');
-            const modalMessage = document.getElementById('modal-message');
-            const closeBtn = document.querySelector('.close-button');
-            
-            function showModal(message) {
-                modalMessage.textContent = message;
-                modal.style.display = 'flex';
-            }
 
-            closeBtn.addEventListener('click', () => {
-                modal.style.display = 'none';
-            });
-
-            window.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-            
             document.querySelectorAll('.truth-card').forEach(card => {
                 card.addEventListener('click', function() {
                     if (this.dataset.isLie === 'true') {
-                        showModal('That\'s the lie!');
+                        this.classList.add('incorrect');
+                        const p = this.querySelector('p');
+                        p.textContent += ' - That\'s the lie!';
                     } else {
-                        showModal('That\'s a truth!');
+                        this.classList.add('correct');
+                        const p = this.querySelector('p');
+                        p.textContent += ' - That\'s a truth!';
                     }
                 });
             });
