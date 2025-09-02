@@ -355,19 +355,31 @@
                         title: "Tech Lead, Network Architecture and Standards",
                         duration: "2024 - Present",
                         points: [
-                            "Provided technical leadership and co-authored the design for a network architecture that enabled the Cross-Site Interconnect (CSI) product, partnering with Product and Engineering teams to build a scalable solution.",
-                            "Drove the business case and secured cross-functional alignment to enable 400ZR for the Edge network, a proactive initiative that influenced the product roadmap and accelerated a formal New Product Introduction (NPI) program."
+                            "Currently serving as a technical lead, driving the strategic vision for network architecture and standards, focusing on future-proofing the network to meet the demands of AI and cloud growth.",
+                            "Secured approval for the Cross-Site Interconnect (CSI) Dev Entry, working in close partnership with Product and Engineering teams to build a solution that enabled the launch of the first phase on a 10G network and laid the groundwork for future scalability to handle larger/elephant flows.",
+                            "Authored the business case and drove alignment across multiple organizations to enable 400ZR for the Edge network, a proactive initiative that helped get resources assigned and have a formal New Product Introduction (NPI) team to land it."
                         ]
                     },
                     {
                         title: "Edge-Design Manager",
                         duration: "2020 - 2024",
                         points: [
-                            "Established a new team by creating a clear vision and mission, and guided the team through a significant re-organization process, ensuring a smooth transition and continued high performance.",
+                            "Established a new team by creating a clear vision and mission, and guided the team through a significant reorganization process, ensuring a smooth transition and continued high performance.",
                             "Led a team of 14 Network Engineers and TPMs to innovate, design, and implement standardized and scalable network architecture.",
                             "Transformed the handover process between the Design and Deploy teams, reducing the average turnaround time by over 50% by introducing a structured workflow with programmatic linkage to business requirements.",
                             "Spearheaded the initiative to deprecate manual material forecasting, implementing an automated system that resulted in a hundreds of millions of dollars reduction in material forecast and the cancellation of open POs valued in the double-digit millions.",
-                            "Architected and enabled strategic direct connectivity solutions that improved cost and reliability for critical enterprise customers, which supported the timely delivery of multi-billion dollar AI cloud deals."
+                            "Architected and drove a strategic solution for direct connectivity with critical enterprise customers, which improved cost and reliability by bypassing traditional colocation facilities. This initiative, which included deploying network machines directly on the data center floor, enabled the timely delivery of multi-billion dollar AI cloud deals."
+                        ]
+                    },
+                    {
+                        title: "Peering Program Manager",
+                        duration: "2015 - 2020",
+                        points: [
+                            "Part of the early stages of Google's Edge peering planning team, where we established a team focused on building relationships with the internet and telecom community to spread Google's network presence to improve network reliability and end-user experience.",
+                            "Drove the launch of low-latency solutions to enable gaming and early Google Cloud offerings in the Middle East region..",
+                            "Automated peering turn-ups and developed a forecasting model that improved 100G forecast accuracy from 56% to 87%, saving significant costs on unneeded hardware builds.",
+                            "Shifted focus to Africa and the Middle East, spearheading the building of peering points of presence and expanding the global cache program to go deeper into more locations to improve customer experience.",
+                            "Helped launch key products like YouTube TV and Stadia."
                         ]
                     }
                 ]
@@ -379,12 +391,18 @@
                     {
                         title: "Program Manager",
                         duration: "2009 - 2015",
-                        points: ["Managed Orange's Edge network, with full responsibility for the USA footprint, including a nationwide program to optimize S&P (Space and Power) usage and billing across the network."]
+                        points: [
+                            "Managed Orange's Edge network, with full responsibility for the USA footprint including gear installation, circuit build, peering, and migration plans.",
+                            "Additionally, led a nationwide program to optimize S&P (Space and Power) usage and billing across the network."
+                        ]
                     },
                     {
                         title: "Manager / Network Engineer",
                         duration: "2005 - 2009",
-                        points: ["Directly supported multinational clients, monitoring mission-critical sites, improving response times, and running Service Improvement Plans (SIPs) to improve customer experience scores."]
+                        points: [
+                            "Joined Equant as one of the first 50 Network Engineers in its Cairo operations center.",
+                            "Directly supported multinational clients, monitoring mission-critical sites, improving response times, and running Service Improvement Plans (SIPs) to improve customer experience scores."
+                        ]
                     }
                 ]
             },
@@ -402,16 +420,10 @@
         };
 
         const skillsData = {
-            network: ["Network Architecture", "Traffic Management", "Network Reliability", "Optical Networking", "Capacity Planning"],
-            product: ["Product Strategy Influence", "Roadmap Development", "End-to-End Product Enablement", "Change Management", "Stakeholder Management"],
-            tools: ["Digital Control Systems", "Automated Workflows", "Process Improvement", "Material Forecasting", "Peering and Interconnect Strategy", "Organizational Structure & Change Management"]
+            network: ["Network Architecture & Engineering", "Traffic Management", "Network Topology", "Automated Workflows", "Network Reliability", "Optical Networking"],
+            tools: ["Digital Control Systems", "Process Improvement", "Capacity Planning", "Material Forecasting", "Program Management", "Peering and Interconnect Strategy"],
+            certifications: ["PMP", "ITIL® Expert 2011", "COBIT® 5", "CCNA", "Change Management Practitioner", "CCNP (Routing & Switching)."]
         };
-
-        const educationData = [
-            { item: "Executive Certificate in Organizational Consulting and Change Leadership", institution: "Georgetown University" },
-            { item: "Bachelor of Electronics and Communications Engineering", institution: "Graduated 2003" },
-            { item: "Certifications:", institution: "PMP, ITIL® Expert 2011, COBIT® 5, CCNA, Change Management Practitioner, CCNP (Routing & Switching)." },
-        ];
         
         document.addEventListener('DOMContentLoaded', () => {
             const experienceTabs = document.getElementById('experience-tabs');
@@ -458,14 +470,19 @@
             }
 
             renderSkills(skillsData.network, 'network-skills');
-            renderSkills(skillsData.product, 'tools-skills');
-            renderSkills(skillsData.tools, 'tools-systems');
+            renderSkills(skillsData.tools, 'tools-skills');
+
+            const toolsSystemsUl = document.getElementById('tools-systems');
+            let toolsSystemsHtml = '';
+            skillsData.tools.forEach(skill => {
+                 toolsSystemsHtml += `<li class="flex items-center"><span class="text-accent mr-2">◆</span>${skill}</li>`
+            });
+            toolsSystemsUl.innerHTML = toolsSystemsHtml;
 
             const eduContainer = document.getElementById('education-certifications');
-            let eduHtml = '';
-            educationData.forEach(edu => {
-                eduHtml += `<div><p class="font-semibold text-gray-800">${edu.item}</p><p class="text-gray-600">${edu.institution}</p></div>`;
-            });
+            let eduHtml = '<div><p class="font-semibold text-gray-800">Bachelor of Electronics and Communications Engineering</p><p class="text-gray-600">Graduated 2003</p></div>';
+            eduHtml += '<div><p class="font-semibold text-gray-800">Executive Certificate in Organizational Consulting and Change Leadership</p><p class="text-gray-600">Georgetown University</p></div>';
+            eduHtml += '<div><p class="font-semibold text-gray-800">Certifications:</p><p class="text-gray-600">PMP, ITIL® Expert 2011, COBIT® 5, CCNA, Change Management Practitioner, CCNP (Routing & Switching).</p></div>';
             eduContainer.innerHTML = eduHtml;
 
             new Chart(document.getElementById('turnaroundTimeChart'), {
